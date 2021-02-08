@@ -1,0 +1,55 @@
+.contenedorP{
+    border: 1px solid #000000;
+}
+
+
+.contenedorH{
+    
+    margin: 10px;
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10);
+    padding: 1px;
+    border: 1px solid #00000034;
+    display: flex;
+}
+.contenedorImg{
+    padding: 8px;
+    /*border: 1px solid #7e2adf75;*/
+}
+
+.contenedorInfo{
+    padding: 8px;
+    /*border: 1px solid #7e2adf75;*/
+}
+
+
+.contenedorInfo p{
+    margin-bottom: -3px;
+}
+
+
+.contenedorInfo :first-child{
+    font-weight: bold;
+    letter-spacing: 10px;
+    font-size: 20px;
+}
+
+.twitter{
+    /*border: 1px solid #7e2adf75;*/
+    display: flex;
+}
+
+.twitter img{
+    width: 20px;
+    margin-right: 5px;
+}
+
+
+.listStyleNone{
+    list-style:none;
+}
+.avatar{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
