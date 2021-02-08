@@ -1,0 +1,35 @@
+
+.Navbar {
+    width: 100%;
+    padding: 0;
+    background-color: #1C3643;
+  }
+  
+  .Navbar__brand {
+    color: #ffffff;
+  
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .Navbar__brand:hover {
+    color: #ececec;
+    text-decoration: none;
+  }
+  
+  .Navbar__brand-logo {
+    margin-right: 0.2rem;
+    margin-left: 0.5rem;
+  }
+
+  .Navbar__title_1{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.Navbar__title_2{
+    /*Hola*/
+}
+.bordes{
+  border:3px solid #c3db3a;
+}
