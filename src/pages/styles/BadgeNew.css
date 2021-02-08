@@ -1,0 +1,21 @@
+.BadgeNew__stars{
+  width: 100%;
+  padding: 2rem 0;
+  background: url('../../images/stars.svg'), #1B1B25;
+  background-repeat: repeat;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: minmax(300px, 400px) 1fr;
+    grid-template-areas:"Badge BadgeForm";
+}
+.Badge{
+    grid-area:Badge;
+}
+.BadgeForm{
+    grid-area:BadgeForm;
+}
