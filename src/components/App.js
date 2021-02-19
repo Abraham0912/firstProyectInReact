@@ -14,7 +14,7 @@ function App() {
     <BrowserRouter>
     <Switch>
       <Route exact path="/badges" component={Badges}/>
-      <Route exact path="/badge/new" component={Badges}/>
+      <Route exact path="/badge/new" component={BadgeNew}/>
     </Switch>
     </BrowserRouter>
   );
