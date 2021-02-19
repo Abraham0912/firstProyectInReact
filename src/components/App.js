@@ -6,7 +6,6 @@ import BadgeNew from '../pages/BadgeNew';
 import Badges from '../pages/Badges';
 import NotFound from '../pages/NotFound';
 import Layaut from './Layaut';
-import NotFound1 from '../pages/NotFound'
 
 
 

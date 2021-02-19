@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 //ESTILOS
 import './styles/BadgesList.css'
 //IMAGENES
-import avatar from '../images/img2.jpeg'
 import twiter from '../images/twiter-logo.png'
 
 
