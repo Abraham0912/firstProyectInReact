@@ -15,12 +15,12 @@ export default class BadgesList extends Component {
                     {this.props.badges.map((badge)=>{
                         return(
                                 <li className="listStyleNone" key={badge.id}>
-                                <div class="contenedorH">
-                                <div class="contenedorImg">
+                                <div className="contenedorH">
+                                <div className="contenedorImg">
                                     <img className="avatar" src={badge.avatarUrl} alt=""/>
                                 </div>
                                 
-                                <div class="contenedorInfo">
+                                <div className="contenedorInfo">
                                     <p>{badge.firstName}</p>
                                     <div className="twitter">
                                         <img src={twiter} alt=""/>

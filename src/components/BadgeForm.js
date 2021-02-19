@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import {Link} from 'react-router-dom'
 import './styles/BadgeForm.css'
 
 export default class BadgeForm extends Component {
@@ -36,6 +36,7 @@ export default class BadgeForm extends Component {
                         <input onChange={this.props.onChange} className="form-control" name="twiter" type="text" value={this.props.twiter}/>
                         <br/>
                         <button onClick={this.handleClick} className="btn btn-primary">Aceptar</button>
+                        <Link style={{marginLeft:'20px'}}to="/badges" className="btn btn-primary">Badges</Link>
                     </div>
                 </form>
             </div>
