@@ -1,11 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment} from 'react'
 //IMPORTANDO IMAGENES
 import logo from '../images/badge-header.svg'
 import avatar from '../images/img3.jpeg'
 //IMPORTANDO ESTILOS
 import './styles/BadgeNew.css'
 //IMPORTANDO COMPONENTES
-import Navbar from '../components/Navbar'
 import Badge from '../components/Badge'
 import BadgeForm from '../components/BadgeForm'
 
@@ -28,8 +27,7 @@ class BadgeNew extends Component {
     }
     render() {
         return (
-            <div>
-                <Navbar/>
+            <Fragment>
                 <div className="BadgeNew__stars">
                     <img className="img-fluid" src={logo} alt="logo"/>
                 </div>
@@ -49,7 +47,7 @@ class BadgeNew extends Component {
 
                 </div>
                 
-            </div>
+            </Fragment>
         )
     }
 }
