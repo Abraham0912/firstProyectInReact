@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 //ESTILOS:
 import './styles/Badges.css'
 //COMPONENTES:
@@ -52,7 +53,7 @@ export default class Badges extends Component {
                 </div>
                 <div className="Badges__container">
                     <div className="Badges__buttons">
-                        <a href="/badges/new" className="btn btn-primary">New badges</a>
+                        <Link to="/badge/new" className="btn btn-primary">New badges</Link>
                     </div>
                     <div className="Badges__list">
                         <div className="Badges__container">
