@@ -39,6 +39,11 @@ export default class Badges extends Component {
             }
           ]
     }
+
+    
+
+
+
     render() {
         return (
             <Fragment>
