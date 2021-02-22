@@ -1,8 +1,10 @@
 .contenedorP{
-    /*border: 1px solid #000000;*/
+    border: 10px solid #00000031;
 }
 
-
+ul{
+    border: 10px solid #0983c948;
+}
 .contenedorH{
     
     margin: 10px;
