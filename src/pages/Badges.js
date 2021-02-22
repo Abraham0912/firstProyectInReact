@@ -5,6 +5,7 @@ import './styles/Badges.css'
 //COMPONENTES:
 import BadgesList from '../components/BadgesList'
 import api from '../api';
+import BadgesLoader from '../components/loaders/BadgesLoader';
 //IMAGENES
 import confLogo from '../images/badge-header.svg';
 
@@ -69,7 +70,9 @@ export default class Badges extends Component {
 
     render() {
         if(this.state.loading === true){
-            return 'Loading...'
+            return (
+                <BadgesLoader></BadgesLoader>
+            )
         }
 
         if(this.state.error){
