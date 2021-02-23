@@ -6,6 +6,7 @@ import './styles/Badges.css'
 import BadgesList from '../components/BadgesList'
 import api from '../api';
 import BadgesLoader from '../components/loaders/BadgesLoader';
+import PageError from '../components/PageError'
 //IMAGENES
 import confLogo from '../images/badge-header.svg';
 
@@ -38,7 +39,7 @@ export default class Badges extends Component {
     fetchData = async()=>{
         this.setState({loading:true,error:null});
         try {
-            const data= await api.badges.list();
+            const data= await api.badgesl.list();
             this.setState({loading:false,data: data})
         } catch (error) {
             this.setState({loading:false,error: error})
@@ -92,7 +93,7 @@ export default class Badges extends Component {
         }
 
         if(this.state.error){
-            return `el Error: es ${this.state.error.message}`
+            return <PageError error={this.state.error}></PageError>//`el Error: es ${this.state.error.message}`
         }
         console.log("2/4.- Soy el metodo render() del ciclo de vida de un componenete => Pinto los elementos del componente");
         return (
