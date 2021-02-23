@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom';
 //ESTILOS
 import './styles/BadgesList.css'
@@ -19,7 +19,7 @@ export default class BadgesList extends Component {
             
         }else{
             return (
-            /*<div className="contenedorP">*/
+            <div className="contenedorP">
                 <ul>
                     {this.props.badges.map((badge)=>{
                         return(
@@ -40,12 +40,12 @@ export default class BadgesList extends Component {
                                 
                                 </div>
                                 </li>
-                                
-                            
                         )
                     })}
+                    <button onClick={this.props.funcion} className="btn btn-outline-success">Cargar mas xd</button>
                 </ul>
-            /*</div>*/
+            </div>
+            
         )
         }
         

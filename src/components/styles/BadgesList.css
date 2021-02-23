@@ -1,9 +1,14 @@
 .contenedorP{
-    border: 10px solid #00000031;
+    /*border: 10px solid #00000031;*/
+        height: 50vh;
+        width: 100%;
+        min-width: 150px;
+        background: #fff;
+        overflow-y: scroll
 }
 
 ul{
-    border: 10px solid #0983c948;
+    /*border: 10px solid #b309c948;*/
 }
 .contenedorH{
     

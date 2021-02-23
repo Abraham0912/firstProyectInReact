@@ -11,8 +11,6 @@ import confLogo from '../images/badge-header.svg';
 
 export default class Badges extends Component {
     
-
-    
     constructor(props){
         super(props);
         console.log("1.-Soy el metodo: constructor() del ciclo de vida de un componenete => Inicio el valor del state");
@@ -20,17 +18,18 @@ export default class Badges extends Component {
         this.state = {
             loading: true,
             error: null,
-            data:[]
+            data:[],
+            page: 1,
+            numero:0,
         }
     }
 
     componentDidMount(){
         console.log("3.-Soy el metodo: componentDidMount() del ciclo de vida de un componenete =>Indico que estoy listo o que soy visible");
 
-        
         this.timeoutId=setTimeout(()=>{this.fetchData()},3000)
 
-        this.timeoutId2=setTimeout(()=>{this.fetchData2()},6000)
+        //this.timeoutId2=setTimeout(()=>{this.fetchData2()},6000)
     }
 
 
@@ -48,24 +47,41 @@ export default class Badges extends Component {
 
 
     fetchData2 = async()=>{
-        const response = await fetch('https://rickandmortyapi.com/api/character');
-        const data = await response.json();
-        this.setState({loading:false,data: data.results})
+        //this.setState({loading:true,error:null});
+        try {
+            const response = await fetch(`https://rickandmortyapi.com/api/character/?page=${this.state.page}`);
+            const data = await response.json();
+            this.setState({loading:false,data: this.state.data.concat(data.results)});
+            //this.setState({loading:false,data: data.results});
+            this.setState({page: this.state.page+1});
+        } catch (error) {
+            this.setState({loading:false,error: error})
+        }     
     }
-
 
 
 
     componentDidUpdate(prevProps, prevState){
         console.log('5.-Soy el metodo; componentDidUpdate() del ciclo de vida de un componenete => Indico que el component ha sido actualizado');
-        console.log({prevProps:prevProps,prevState:prevState});
-        console.log({props:this.props,state:this.state});
+        //console.log({prevProps:prevProps,prevState:prevState});
+        //console.log({props:this.props,state:this.state});
     }
 
     componentWillUnmount(){
         console.log("6.-Soy el metodo componentWillUnmount del ciclo de vida de un componenete => Indico que ha finalizado el ciclo de vida del componenete");
         clearInterval(this.timeoutId);
         clearInterval(this.timeoutId2);
+    }
+
+
+    cargarMas =()=>{
+        if(this.state.page <= 3){
+            //alert(`EL valor de page es: ${this.state.page}`);
+            this.fetchData2();
+        }
+        else{
+            alert(`Llego al limite de las paginas ${this.state.page}`);
+        }
     }
 
     render() {
@@ -94,7 +110,10 @@ export default class Badges extends Component {
                     </div>
                     <div className="Badges__list">
                         <div className="Badges__container">
-                            <BadgesList badges={this.state.data}/>
+                            <BadgesList 
+                            badges={this.state.data} 
+                            funcion = {this.cargarMas}
+                            />
                         </div>
                     </div>
                 </div>

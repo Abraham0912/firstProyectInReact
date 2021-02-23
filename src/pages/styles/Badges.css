@@ -13,6 +13,7 @@
 }
 
 .Badges__container {
+  /*border: 10px solid #00000031;*/
   width: 100%;
   max-width: 580px;
   margin: 0 auto;

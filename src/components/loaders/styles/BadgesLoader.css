@@ -1,0 +1,36 @@
+.contenedorLola{
+    /*border: 10px solid #00000031;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 180px 1fr;
+    grid-template-areas: 
+    "header header header"
+    ". list .";
+}
+
+
+.header{
+    grid-area:header;
+}
+
+
+.list{
+    /*border: 3px solid #552680;*/
+    grid-area:list;   
+    height: 50vh;
+    width: 100%;
+    min-width: 150px;
+    background: #fff;
+    overflow-y: scroll
+}
+.item{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.list2{
+    width: 300px;
+    flex-wrap: wrap;
+}
