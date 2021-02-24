@@ -3,23 +3,26 @@
     width: 100%;
     padding: 0;
     background-color: #1C3643;
+    display: flex;
+    justify-content: space-between;
   }
   
   .Navbar__brand {
     color: #ffffff;
-  
-    display: inline-flex;
+    /*display: inline-flex;*/
     align-items: center;
+    padding: 8px;
   }
   
   .Navbar__brand:hover {
-    color: #ececec;
+    color: #a3ffca;
     text-decoration: none;
   }
   
   .Navbar__brand-logo {
     margin-right: 0.2rem;
     margin-left: 0.5rem;
+    width: 6vw;
   }
 
   .Navbar__title_1{
@@ -30,4 +33,14 @@
 
 .bordes{
   border:3px solid #c3db3a;
+}
+
+
+
+
+.Navbar__brand2 {
+  color: #ffffff;
+
+  display: inline-flex;
+  align-items: center;
 }
