@@ -4,6 +4,9 @@ import logo from '../images/logo.svg'
 
 /*IMPORTANDO ESTILOS*/
 import "./styles/Badge.css"
+//IMPORTANDO COMPONENTES
+
+import Gravatar from '../components/Gravatar'
 
 class Badge extends Component {
   render() {
@@ -28,7 +31,6 @@ class Badge extends Component {
               @{this.props.socialNetwork}
             </p>
             <p>dignissimos consequuntssssssssur provident ipsa iste qui tenetvident ipsa iste qur accusantium! Blanditiis.</p>
-            {/*<Prueba/>*/}
           </div>
         </div>
 

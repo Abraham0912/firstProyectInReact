@@ -5,6 +5,8 @@ import './styles/BadgesList.css'
 //IMAGENES
 import twiter from '../images/twiter-logo.png'
 
+//Componenetes
+
 
 
 export default class BadgesList extends Component {

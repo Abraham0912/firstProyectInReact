@@ -66,8 +66,7 @@ export default class Badges extends Component {
     fetchData3 = async()=>{
         //this.setState({loading:true,error:null});
         try {
-            alert(this.state.page);
-            this.setState({page: 3});
+            this.setState({page: this.state.page+1});
             const response = await fetch(`https://rickandmortyapi.com/api/character/?page=${this.state.page}`);
             const data = await response.json();
             this.setState({loading:false,data: this.state.data.concat(data.results)});
