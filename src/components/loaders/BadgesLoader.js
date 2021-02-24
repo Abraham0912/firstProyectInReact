@@ -14,7 +14,7 @@ export default class BadgesLoader extends Component {
           
           
           <div className="header">
-            <Skeleton height={120} />
+            <Skeleton className="skeleton" height={120} />
           </div>
 
 

@@ -48,6 +48,22 @@ export default class Badges extends Component {
 
 
     fetchData2 = async()=>{
+        this.setState({loading:true,error:null});
+        try {
+            this.setState({page: 1});
+            const response = await fetch(`https://rickandmortyapi.com/api/character/?page=${this.state.page}`);
+            const data = await response.json();
+            //this.setState({loading:false,data: this.state.data.concat(data.results)});
+            this.setState({loading:false,data: data.results});
+            //this.setState({page: this.state.page+1});
+        } catch (error) {
+            this.setState({loading:false,error: error})
+        }     
+    }
+
+
+
+    fetchData3 = async()=>{
         //this.setState({loading:true,error:null});
         try {
             const response = await fetch(`https://rickandmortyapi.com/api/character/?page=${this.state.page}`);
@@ -59,6 +75,7 @@ export default class Badges extends Component {
             this.setState({loading:false,error: error})
         }     
     }
+
 
 
 
@@ -78,7 +95,7 @@ export default class Badges extends Component {
     cargarMas =()=>{
         if(this.state.page <= 3){
             //alert(`EL valor de page es: ${this.state.page}`);
-            this.fetchData2();
+            this.fetchData3();
         }
         else{
             alert(`Llego al limite de las paginas ${this.state.page}`);
@@ -108,6 +125,8 @@ export default class Badges extends Component {
                 <div className="Badges__container">
                     <div className="Badges__buttons">
                         <Link to="/badge/new" className="btn btn-primary">New badges</Link>
+                        <button onClick={this.fetchData} className="btn btn-primary">Personas</button>
+                        <button onClick={this.fetchData2} className="btn btn-primary">Animes</button>
                     </div>
                     <div className="Badges__list">
                         <div className="Badges__container">
