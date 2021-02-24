@@ -9,6 +9,7 @@
 
 
 .container{
+    margin-top: 20px;
     display: grid;
     grid-template-columns: minmax(300px, 400px) 1fr;
     grid-template-areas:"Badge BadgeForm";

@@ -1,7 +1,6 @@
 import React, { Component, Fragment} from 'react'
 //IMPORTANDO IMAGENES
 import logo from '../images/badge-header.svg'
-import avatar from '../images/img3.jpeg'
 //IMPORTANDO ESTILOS
 import './styles/BadgeNew.css'
 //IMPORTANDO COMPONENTES
@@ -28,18 +27,17 @@ class BadgeNew extends Component {
     render() {
         return (
             <Fragment>
-                <div className="BadgeNew__stars">
-                    <img className="img-fluid" src={logo} alt="logo"/>
-                </div>
+               
                 <div className="container">
                     <div className="Badge">
                     <Badge 
-                    firstName={this.state.form.firstName}
-                    lastName={this.state.form.lastName}
-                    profession={this.state.form.jobTitle}
-                    socialNetwork={this.state.form.twiter}
-                    email={this.state.form.email}
-                    avatar={avatar}/></div>
+                    firstName={this.state.form.firstName || 'FirstName'}
+                    lastName={this.state.form.lastName|| 'LastName'}
+                    profession={this.state.form.jobTitle|| 'JobTitle'}
+                    socialNetwork={this.state.form.twiter|| 'Twitter'}
+                    email={this.state.form.email|| 'Email'}
+                    avatar={'https://www.gravatar.com/avatar/82d4628e093cad1bdcfb24e5eecd815d?d=identicon'}/>
+                    </div>
 
                     <div className="BadgeForm">
                     <BadgeForm onChange = {this.handleChange} formValues={this.state.form}/>

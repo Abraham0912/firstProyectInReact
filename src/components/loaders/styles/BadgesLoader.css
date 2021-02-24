@@ -16,6 +16,7 @@
 
 .list{
     /*border: 3px solid #552680;*/
+    margin-top: 10px;
     grid-area:list;   
     height: 50vh;
     width: 100%;
@@ -24,6 +25,8 @@
     overflow-y: scroll
 }
 .item{
+    border: 1px solid #0303033b;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10);
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 20px;

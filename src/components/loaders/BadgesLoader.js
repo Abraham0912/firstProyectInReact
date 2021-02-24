@@ -40,6 +40,13 @@ export default class BadgesLoader extends Component {
                   <Skeleton count={3} />
                 </div>
               </div>
+
+              <div className="item">
+                <Skeleton circle={true} height={80} width={80} />
+                <div className="list2">
+                  <Skeleton count={3} />
+                </div>
+              </div>
             </div>
             
           

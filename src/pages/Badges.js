@@ -39,7 +39,7 @@ export default class Badges extends Component {
     fetchData = async()=>{
         this.setState({loading:true,error:null});
         try {
-            const data= await api.badgesl.list();
+            const data= await api.badges.list();
             this.setState({loading:false,data: data})
         } catch (error) {
             this.setState({loading:false,error: error})
