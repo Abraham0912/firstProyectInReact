@@ -12,7 +12,9 @@ export default class componentName extends Component {
     }
     
     sumar = ()=>{
-        alert("Estoy sumando xD");
+        this.setState({
+            contador: this.state.contador+1,
+        })
     }
 
     render() {
