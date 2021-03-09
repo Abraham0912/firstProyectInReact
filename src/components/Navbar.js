@@ -20,7 +20,8 @@ class Navbar extends Component {
 
                 <div className="Navbar__brand2">
                     <Link className="nav-link" to="/badges">Badges</Link>
-                    <Link className="" to="/badge/new">BadgesNew</Link>
+                    <Link className="nav-link" to="/badge/new">BadgesNew</Link>
+                    <Link className="nav-link" to="/testing">Pruebas</Link>
 
 
                 </div>
