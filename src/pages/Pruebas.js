@@ -2,14 +2,10 @@ import React, { Fragment , Component } from 'react'
 
 export default class componentName extends Component {
 
-    constructor() {
-        super();
-    
-        this.state = {
+    state = {
           title: "Componente Pruebas.js",
           contador: 0,
         };
-    }
     
     sumar = ()=>{
         this.setState({
