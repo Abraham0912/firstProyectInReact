@@ -17,6 +17,13 @@ export default class componentName extends Component {
         })
     }
 
+
+    restar = ()=>{
+        this.setState({
+            contador: this.state.contador-1,
+        })
+    }
+
     render() {
         return (
             <Fragment>
@@ -24,7 +31,7 @@ export default class componentName extends Component {
                 <h1>{this.state.title}</h1>
                 <p>{this.state.contador}</p>
                 <button onClick={this.sumar}>Sumar</button>
-                <button>Restar</button>
+                <button onClick={this.restar}>Restar</button>
             </div>
             </Fragment>
         )
