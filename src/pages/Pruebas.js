@@ -29,6 +29,7 @@ export default class componentName extends Component {
             <Fragment>
             <div>
                 <h1>{this.state.title}</h1>
+                <h2>Eventos:</h2>
                 <p>{this.state.contador}</p>
                 <button onClick={this.sumar}>Sumar</button>
                 <button onClick={this.restar}>Restar</button>
