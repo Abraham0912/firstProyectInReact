@@ -1,4 +1,5 @@
 import React, { Fragment , Component } from 'react'
+import CDV from '../components/pruebas/CicloDeVida.js'
 
 export default class Pruebas extends Component {
 
@@ -34,6 +35,7 @@ export default class Pruebas extends Component {
                 <button onClick={this.sumar}>Sumar</button>
                 <button onClick={this.restar}>Restar</button>
                 <button onClick={this.saludar}>Saludar</button>
+                <CDV></CDV>
             </div>
             </Fragment>
         )
