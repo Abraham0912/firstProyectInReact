@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './styles/CicloDeVida.css'
 
-export default class componentName extends Component {
+export default class CicloDeVida extends Component {
 
     constructor(props){
         super(props);
@@ -20,7 +20,7 @@ export default class componentName extends Component {
 
 
     cambiTexto = ()=>{
-        this.setState({texto: 'Oprimiste el botón'})
+        this.setState({texto: 'Oprimiste el botón, por lo que se actualizo el componente y se paso a la segunda face del ciclo de vida'})
     }
     //METODOS DE CICLO DE VIDA_FIN
 
