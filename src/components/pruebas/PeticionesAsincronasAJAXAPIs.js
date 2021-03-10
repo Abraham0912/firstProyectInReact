@@ -52,7 +52,13 @@ export default class PeticionesAsincronas extends Component {
             <div>
                 <h1>Componente: PeticionesAsíncronas(AJAX y API's)</h1>
                 
-                
+                {this.state.contenido ==true ? (
+                this.state.pokemons.map(value => <Pokemon key={value.id} name = {value.name} avatar={value.avatar}></Pokemon>)
+                 ) :
+                 <h1>Sin datos</h1>
+                 }
+                 <button onClick={this.verContenido}>ver contenido</button>
+                 <button onClick={this.hideContenido}>Ofuscar-ocultar contenido</button>
                 
             </div>
         )
