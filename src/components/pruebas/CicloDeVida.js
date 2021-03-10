@@ -14,7 +14,7 @@ export default class componentName extends Component {
         console.log("Ciclo:Montaje/Paso: 3: componentDidMount() =>Indico que estoy listo o que soy visible");
     }
 
-    componentDidUpdate(){
+    componentDidUpdate(objetoConPropsPrevias,objetoConStatePrevio){
         console.log("Ciclo:Actualización/Paso: 2.2: componentDidUpdate() =>Indico que he sido actualizado");
     }
 
@@ -25,15 +25,15 @@ export default class componentName extends Component {
     //METODOS DE CICLO DE VIDA_FIN
 
     render() {
-        console.log("Ciclo:Montaje/Paso: 2=Render");
+        console.log("Ciclo:Montaje/Paso: 2=Render, Ciclo:Actualización/Paso: 2.1=Render");
         return (
             <div className="bordes">
                 <h1>Soy ciclo de vida</h1>
                 <p>El ciclo de vida de un componente consiste en en 3 faces</p>
                 <ul>
-                    <li><b>Montaje</b> que contiene 3 fases</li>
-                    <li><b>Actualizacion</b> que contiene 2 faces</li>
-                    <li><b>Desmontaje</b> que contiene 1 face</li>
+                    <li><b>Montaje</b> que contiene 3 pasos</li>
+                    <li><b>Actualizacion</b> que contiene 2 pasos</li>
+                    <li><b>Desmontaje</b> que contiene 1 pasos, el cual se puede ver con uso de hoocks</li>
                 </ul>
                 <h2>{this.state.texto}</h2>
                 <button onClick={this.cambiTexto}>boton</button>
