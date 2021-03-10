@@ -111,7 +111,7 @@ export default class Badges extends Component {
         if(this.state.error){
             return <PageError error={this.state.error}></PageError>//`el Error: es ${this.state.error.message}`
         }
-        console.log("2/4.- Soy el metodo render() del ciclo de vida de un componenete => Pinto los elementos del componente");
+        console.log("2.-/4.- Soy el metodo render() del ciclo de vida de un componenete => Pinto los elementos del componente");
         return (
             <Fragment>
                 <div className="Badges">

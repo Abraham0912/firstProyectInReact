@@ -1,6 +1,6 @@
 import React, { Fragment , Component } from 'react'
 
-export default class componentName extends Component {
+export default class Pruebas extends Component {
 
     state = {
           title: "Componente Pruebas.js",
@@ -20,6 +20,10 @@ export default class componentName extends Component {
         })
     }
 
+    saludar = (e)=>{
+        alert(`Hola buen día`);
+    }
+
     render() {
         return (
             <Fragment>
@@ -29,6 +33,7 @@ export default class componentName extends Component {
                 <p>{this.state.contador}</p>
                 <button onClick={this.sumar}>Sumar</button>
                 <button onClick={this.restar}>Restar</button>
+                <button onClick={this.saludar}>Saludar</button>
             </div>
             </Fragment>
         )
