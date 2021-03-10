@@ -28,7 +28,7 @@ export default class CicloDeVida extends Component {
         console.log("Ciclo:Montaje/Paso: 2=Render, Ciclo:Actualización/Paso: 2.1=Render");
         return (
             <div className="bordes">
-                <h1>Soy ciclo de vida</h1>
+                <h1>Componente: Ciclo de vida</h1>
                 <p>El ciclo de vida de un componente consiste en en 3 faces</p>
                 <ul>
                     <li><b>Montaje</b> que contiene 3 pasos</li>
