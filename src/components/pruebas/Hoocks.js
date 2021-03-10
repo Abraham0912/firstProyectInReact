@@ -23,4 +23,4 @@ export default function Hoocks(props) {
     )
 }
 
-
+Hoocks.defaultProps ={titulo:'SOY defaultProps',}
