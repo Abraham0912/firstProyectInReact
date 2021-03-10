@@ -1,6 +1,7 @@
 import React, { Fragment , Component } from 'react'
 import CDV from '../components/pruebas/CicloDeVida.js'
 import PeticionesAsincronas from '../components/pruebas/PeticionesAsincronasAJAXAPIs.js'
+import Hoocks from '../components/pruebas/Hoocks.js'
 
 export default class Pruebas extends Component {
 
@@ -36,8 +37,12 @@ export default class Pruebas extends Component {
                 <button onClick={this.sumar}>Sumar</button>
                 <button onClick={this.restar}>Restar</button>
                 <button onClick={this.saludar}>Saludar</button>
+                <hr/>
                 <CDV></CDV>
+                <hr/>
                 <PeticionesAsincronas></PeticionesAsincronas>
+                <hr/>
+                <Hoocks/>
             </div>
             </Fragment>
         )
