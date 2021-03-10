@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class PeticionesAsíncronas extends Component {
+export default class PeticionesAsincronas extends Component {
     render() {
         return (
             <div>
